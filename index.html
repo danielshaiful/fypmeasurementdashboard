@@ -183,8 +183,8 @@ td { padding: 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
       <div class="form-group">
         <label>Face recognition condition</label>
         <select id="inp-face" style="width:100%;">
-          <option>Bright light</option>
-          <option>Dim light</option>
+          <option>Recognized</option>
+          <option>Unrecognized</option>
           <option>Backlight</option>
           <option>Glasses</option>
           <option>Side angle</option>
@@ -403,7 +403,7 @@ td { padding: 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
       </div>
       <div class="reset-option-action">
         <select id="reset-face" style="min-width:130px;">
-          <option>Bright light</option><option>Dim light</option><option>Backlight</option>
+          <option>Recognized</option><option>Unrecognized</option><option>Backlight</option>
           <option>Glasses</option><option>Side angle</option><option>Photo attack</option>
           <option>Screen attack</option><option>Video attack</option>
         </select>
@@ -593,7 +593,7 @@ function renderTable() {
 
 function destroyChart(c) { if (c) { try { c.destroy(); } catch(e){} } }
 
-const FACE_CONDITIONS = ['Bright light','Dim light','Backlight','Glasses','Side angle','Photo attack','Screen attack','Video attack'];
+const FACE_CONDITIONS = ['Recognized','Unrecognized','Backlight','Glasses','Side angle','Photo attack','Screen attack','Video attack'];
 
 function renderCharts() {
   const m = getMetrics();
