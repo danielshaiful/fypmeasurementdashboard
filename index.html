@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h2 class="sr-only">Face Recognition & Passkey authentication & authorization performance measurement dashboard with
+    <h2 class="sr-only">Passkey & Face Recognition authentication performance measurement dashboard with
         Accuracy, FAR, and FRR metrics</h2>
     <style>
         :root {
@@ -536,6 +536,7 @@
 
         <!-- TAB: RESULTS -->
         <div id="tab-results" class="tab-content">
+            <h2>Chart Analysis/Metric</h2>
             <div class="section">
                 <p class="section-title">Test log</p>
                 <div class="table-wrap">
@@ -568,6 +569,7 @@
 
         <!-- TAB: CHARTS -->
         <div id="tab-charts" class="tab-content">
+            <h2>Chart Analysis/Metric</h2>
             <div class="section">
                 <p class="section-title">Metrics vs target</p>
                 <div style="position:relative;height:280px;"><canvas id="chart-metrics"></canvas></div>
@@ -1211,7 +1213,7 @@
             const originalStyles = tabsToCapture.map(id => document.getElementById(id).style.display);
             tabsToCapture.forEach(id => { document.getElementById(id).style.display = 'block'; });
             doc.setFontSize(18);
-            doc.text("Face Authentication Research Report", 10, 15);
+            doc.text("Passkey & Face Recognition Authentication Research Report", 10, 15);
             doc.setFontSize(10);
             doc.text("Generated: " + new Date().toLocaleString(), 10, 22);
             for (let i = 0; i < tabsToCapture.length; i++) {
